@@ -1,4 +1,4 @@
-# notes
+# notes : 为记录而记录:)
 
 * [tcpdump命令详解][tcpdump-command]
 * [tcpdump输出格式][tcpdump-output-format]
