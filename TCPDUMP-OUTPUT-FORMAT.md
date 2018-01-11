@@ -1,29 +1,27 @@
 ##### TCPDUMP OUTPUT FORMAT
 
-###### Timestamps  *hh:mm:ss.frac*
+* Timestamps  *hh:mm:ss.frac*
 
-Link Level Headers
 
-ARP/RARP Packets
+* TCP Packets
 
-IPv4 Packets
+  ​	TCP协议的通常输出格式:
 
-TCP Packets
+  ​		src > dst: Flags [tcpflags], seq data-seqno, ack ackno, win window, urg urgent, options [opts], length len
 
-​	The general format of a TCP protocol line is:
+  ​		[tcpflags] : S indicates SYN,  . indicates ACK,  P indicates PUSH, etc.
 
-​		src > dst: Flags [tcpflags], seq data-seqno, ack ackno, win window, urg urgent, options [opts], length len
+  ​		tcp[flags] indicates tcp[13]
 
-​		[tcpflags] : S indicates SYN,  . indicates ACK,  P indicates PUSH, etc.
+  ​		tcp[tcp-fin], tcp[tcp-rst], tcp[tcp-push], tcp[tcp-ack], tcp[tcp-urg], tcp[tcp-syn]
 
-​		tcp[flags] indicates tcp[13]
+* DNS请求:
 
-​		tcp[tcp-fin], tcp[tcp-rst], tcp[tcp-push], tcp[tcp-ack], tcp[tcp-urg], tcp[tcp-syn]
+  ​	src > dst: id op? flags qtype qclass name (len)
 
-DNS Request
+* DNS响应:
 
-​	src > dst: id op? flags qtype qclass name (len)
+  ​	src > dst: id op rcode flags a/n/au type class data (len)
 
-DNS Response
+详细请查看 [tcp-output-format](http://www.tcpdump.org/manpages/tcpdump.1.html#lbAG)
 
-​	src > dst: id op rcode flags a/n/au type class data (len)

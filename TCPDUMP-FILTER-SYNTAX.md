@@ -14,75 +14,41 @@ More complex filter expressions are built up by using the words **and**, **or** 
 
 Allowable primitives are:
 
-**dst** **host** *host*
-
-**src** **host** *host*
-
-**host** *host*
-
-**ether** **dst** *ehost*
-
-**ether** **src** *ehost*
-
-**ether** **host** *ehost*
-
-**gateway** *host*
-
-**dst** **net** *net*
-
-**src** **net** *net*
-
-**net** *net*
-
-**net** *net* **mask** *netmask*
-
-**net** *net|len*
-
-**dst** **port** *port*
-
-**src** **port** *port*
-
-**port** *port*
-
-**dst** **portrange** *port1-port2*
-
-**src** **portrange** *port1-port2*
-
-**portrange** *port1-port2*
-
-*expr relop expr*
-
-**less** *length*
-
-**greater** *length*
-
-**ip** **proto** *protocol* : *Protocol* can be a number or one of the names **icmp**, **icmp6**, **igmp**, **igrp**, **pim**, **ah**, **esp**, **vrrp**, **udp**, or **tcp**. Note that the identifiers **tcp**, **udp** and **icmp** are also keywords and must be escaped via backslash(\\). Note that this primitive does not chase the protocol header chain.
-
-**ip6** **proto** *protocol*
-
-**proto** *protocol*
-
-**ip6** **protochain** *protocol*
-
-**ip** **protochain** *protocol*
-
-**protochain** *protocol*
-
-**ether** **broadcast**
-
-**ip** **broadcast**
-
-**ether** **multicast**
-
-**ip** **multicast**
-
-**ip6** **mutlicast**
-
-**ether** **proto** *protocol*
-
-**ifname** *interface*
-
-**on** *interface*
+* **dst** **host** *host*
+* **src** **host** *host*
+* **host** *host*
+* **ether** **dst** *ehost*
+* **ether** **src** *ehost*
+* **ether** **host** *ehost*
+* **gateway** *host*
+* **dst** **net** *net*
+* **src** **net** *net*
+* **net** *net*
+* **net** *net* **mask** *netmask*
+* **net** *net|len*
+* **dst** **port** *port*
+* **src** **port** *port*
+* **port** *port*
+* **dst** **portrange** *port1-port2*
+* **src** **portrange** *port1-port2*
+* **portrange** *port1-port2*
+* **expr relop expr**
+* **less** *length*
+* **greater** *length*
+* **ip**  **proto** *protocol* : *Protocol* can be a number or one of the names **icmp**, **icmp6**, **igmp**, **igrp**, **pim**, **ah**, **esp**, **vrrp**, **udp**, or **tcp**. Note that the identifiers **tcp**, **udp** and **icmp** are also keywords and must be escaped via backslash(\\). Note that this primitive does not chase the protocol header chain.
+* **ip6** **proto** *protocol*
+* **proto** *protocol*
+* **ip6** **protochain** *protocol*
+* **ip** **protochain** *protocol*
+* **protochain** protocol
+* **ether** **broadcast**
+* **ip** **broadcast**
+* **ether** **multicast**
+* **ip** **multicast**
+* **ip6** **mutlicast**
+* **ether** **proto** *protocol*
+* **ifname** *interface*
+* **on** *interface*
 
 
 
@@ -92,9 +58,10 @@ If an identifier is given without a keyword, the most recent keyword is assumed.
 
 is short for
 
-​	**not hsot vs and host ace**
+​	**not host vs and host ace**
 
 which should not be confused with
 
 ​	**not ( host vs or ace )**
 
+For details, please click [tcpdump-filter-syntax](http://www.tcpdump.org/manpages/pcap-filter.7.html)

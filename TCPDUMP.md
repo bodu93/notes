@@ -134,7 +134,7 @@ tcpdump    \[-AbdDefhHIJKlLnNOpqStuUvxX#]   \[-B *buffer-size*]
 
 ​	过滤表达式。
 
-
+更多详细资料请看 [tcpdump-manpage](http://www.tcpdump.org/manpages/tcpdump.1.html)
 
 
 
