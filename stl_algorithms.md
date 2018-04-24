@@ -1,6 +1,6 @@
-##input-iterator | output-iterator > forward-iterator > bidirectional-iterator > random-access-iterator
+## input-iterator | output-iterator > forward-iterator > bidirectional-iterator > random-access-iterator
 
-####NonModifying Algorithms \<algorithm>
+#### NonModifying Algorithms \<algorithm>
 
 ```c++
 difference_type count(InputIterator beg, InputIterator end, const T& value)
@@ -69,7 +69,7 @@ bool none_of(InputIterator beg, InputIterator end, UnaryPredicate op)
 
 
 
-####Modifying Algorithms \<algorithm>
+#### Modifying Algorithms \<algorithm>
 
 ```c++
 OutputIterator copy(InputIterator sourceBeg, InputIterator sourceEnd, OutputIterator destBeg)
@@ -101,7 +101,7 @@ OutputIterator replace_copy_if(InputIterator sourceBeg, InputIterator sourceEnd,
 
 
 
-####Removing Algorithms \<algorithm>
+#### Removing Algorithms \<algorithm>
 
 ```c++
 ForwardIterator remove(ForwardIterator beg, ForwardIterator end, const T& value)
@@ -118,7 +118,7 @@ OutputIterator unique_copy(InputIterator sourceBeg, InputIterator sourceEnd, Out
 
 
 
-####Mutaing Algorithms \<algorithm>
+#### Mutaing Algorithms \<algorithm>
 
 ```cpp
 void reverse(BidirectionalIterator beg, BidirectionalIterator end)
@@ -146,7 +146,7 @@ std::pair<OutputIterator1, OutputIterator2> partional_copy(InputIterator sourceB
 
 
 
-####Sorting Algorithms \<algorithm>
+#### Sorting Algorithms \<algorithm>
 
 ```c++
 void sort(RandomAccessIterator beg, RandomIterator end)
@@ -177,7 +177,7 @@ void pop_heap(RandomAccessIterator beg, RandomAccessIterator end, BinaryPredicat
 
 
 
-####Sorted-Range Algorithms \<algorithm>
+#### Sorted-Range Algorithms \<algorithm>
 
 ```c++
 bool binary_search(ForwardIterator beg, ForwardIterator end, const T& value)
@@ -213,7 +213,7 @@ void inplace_merge(BidirectionalIterator beg1, BidirectionalIterator end1beg2, B
 
 
 
-####Numeric Algorithms \<numeric>
+#### Numeric Algorithms \<numeric>
 
 ```c++
 T accumulate(InputIterator beg, InputIterator end, T initValue);
