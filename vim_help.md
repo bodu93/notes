@@ -1,4 +1,4 @@
-##vim help document
+## vim help document
 
 #### normal mode
 
