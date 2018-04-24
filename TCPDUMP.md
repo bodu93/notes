@@ -104,13 +104,25 @@ tcpdump    \[-AbdDefhHIJKlLnNOpqStuUvxX#]   \[-B *buffer-size*]
 
 ​	打印绝对而非相对TCP序列号。
 
+`-s snaplen`
+
+`--snapshot-length=snaplen`
+
+​	只抓取指定协议数据帧的指定长度(`snaplen`)，而不是默认的262144字节。其余数据将被截断，这样做一方面是为了降低抓包分析的时间，另一方面是为了减小tcpdump抓包的缓存大小。我们总是应该将`snaplen`设置成能够获取到我们感兴趣的协议信息的最短长度。为了保持向老版本的兼容，`snaplen`的取值从0到262144。
+
 `-T type`
 
 ​	强迫输出特定类型的数据包， 目前已知的类型有`aodv` `carp` `cnfp` `lmp` `pgm` `tftp` `rpc` `rtp`  `snmp`等。
 
 `-t`  :  不要打印时间戳
 
-`-tt` `-ttt` `-tttt` `-ttttt`  : 打印时间戳，精度由低到高。
+`-tt` : 打印从UNIX纪元开始以来的时间戳
+
+`-ttt` : 打印当前行到上一行的间隔(微秒精度级别)
+
+`-tttt` : 打印年月日时分秒以及秒的小数
+
+`-ttttt` : (连续5个t)打印当前行到第一行开始的间隔(微秒精度级别)
 
 `-v` `-vv` `-vvv` : 冗余输出，冗余程度由低到高。
 
